@@ -16,7 +16,7 @@ Yumikoo_text = [
 "who are you",    
 "aap kon ho",
 "aap mere owner to nhi lgte ",
-"hey tum mera name kyu le rhe ho meko sone do",
+"hey tum mera name kyu le rhe ho mujhe sone do",
 "ha bolo kya kaam hai ",
 "dekho abhi mai busy hu ",
 "hey i am busy",
@@ -28,7 +28,7 @@ Yumikoo_text = [
 strict_txt = [
 "i can't restrict against my besties",
 "are you serious i am not restrict to my friends",
-"fuck you bsdk k mai apne dosto ko kyu kru",
+"fuck you bsdk, mai apne dosto ko kyu kru",
 "hey stupid admin ", 
 "ha ye phele krlo maar lo ek dusre ki gwaand",  
 "i can't hi is my closest friend",
@@ -38,13 +38,13 @@ strict_txt = [
 
  
 ban = ["ban","boom"]
-unban = ["unban",]
-mute = ["mute","silent","shut"]
-unmute = ["unmute","speak","free"]
-kick = ["kick", "out","nikaal","nikal"]
+unban = ["unban","wapis"]
+mute = ["mute","silent","shut","chup"]
+unmute = ["unmute","speak","free","bolnede"]
+kick = ["kick", "out","nikaal","nikal","punch"]
 promote = ["promote","adminship"]
 fullpromote = ["fullpromote","fulladmin"]
-demote = ["demote","lelo"]
+demote = ["demote","lelo","downpromote"]
 group = ["group"]
 channel = ["channel"]
 
@@ -53,7 +53,7 @@ channel = ["channel"]
 # ========================================= #
 
 
-@app.on_message(filters.command(["ina","inata"], prefixes=["h", "H"]) & admin_filter)
+@app.on_message(filters.command(["hiki","hikimori"], prefixes=["s", "S"]) & admin_filter)
 async def restriction_app(app :app, message):
     reply = message.reply_to_message
     chat_id = message.chat.id
@@ -71,13 +71,13 @@ async def restriction_app(app :app, message):
                     await message.reply(random.choice(strict_txt))          
                 else:
                     await app.ban_chat_member(chat_id, user_id)
-                    await message.reply("OK, Ban kar diya madrchod ko sala Chutiya tha !")
+                    await message.reply("OK, Ban krdia maderchod ko rand tha apko tang kar rha tha !")
                     
         for unbanned in data:
             print(f"present {unbanned}")
             if unbanned in unban:
                 await app.unban_chat_member(chat_id, user_id)
-                await message.reply(f"Ok, aap bolte hai to unban kar diya") 
+                await message.reply(f"Ok, aapke kehne pr unban kr rhi hun") 
                 
         for kicked in data:
             print(f"present {kicked}")
@@ -88,7 +88,7 @@ async def restriction_app(app :app, message):
                 else:
                     await app.ban_chat_member(chat_id, user_id)
                     await app.unban_chat_member(chat_id, user_id)
-                    await message.reply("get lost! bhga diya bhosdi wale ko") 
+                    await message.reply("get lost! laat mardia bhosdike ko") 
                     
         for muted in data:
             print(f"present {muted}") 
@@ -99,7 +99,7 @@ async def restriction_app(app :app, message):
                 else:
                     permissions = ChatPermissions(can_send_messages=False)
                     await message.chat.restrict_member(user_id, permissions)
-                    await message.reply(f"muted successfully! Disgusting people.") 
+                    await message.reply(f"muted successfully! chup kar chutiye.") 
                     
         for unmuted in data:
             print(f"present {unmuted}")            
