@@ -9,22 +9,22 @@ from pyrogram import filters
 load_dotenv()
 # ------------------------------------
 # -----------------------------------------------------
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("29074416"))
+API_HASH = getenv("b30d5a8312842f59f0eb56b147b2702f")
 # ------------------------------------------------------
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("7328867096:AAHsLIADiB70RHa-fK5-Xp2DyMENWzAIQ-M")
 # -------------------------------------------------------
-OWNER_USERNAME = getenv("OWNER_USERNAME","iam_daxx")
+OWNER_USERNAME = getenv("OWNER_USERNAME","kenkaneki_30")
 # --------------------------------------------------------
-BOT_USERNAME = getenv("BOT_USERNAME" , "Hinata_X_Music_robot")
+BOT_USERNAME = getenv("BOT_USERNAME" , "Shikimorisan_musicbot")
 # --------------------------------------------------------
-BOT_NAME = getenv("BOT_NAME" , "HINATA")
+BOT_NAME = getenv("BOT_NAME" , "Shikimori")
 # ---------------------------------------------------------
-ASSUSERNAME = getenv("ASSUSERNAME" , "tanjiro_x_coder")
+ASSUSERNAME = getenv("ASSUSERNAME" , "getopandey")
 # ---------------------------------------------------------
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/vikas-851/DAXXMUSIC",
+    "https://github.com/KenKaneki30/Shikimori",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "Master")
 GIT_TOKEN = getenv(
@@ -35,7 +35,7 @@ SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "3000"))
 
 #---------------------------------------------------------------
 #---------------------------------------------------------------
-MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+MONGO_DB_URI = getenv("MONGO_DB_URI", mongodb+srv://kenkaneki30:kenkaneki30@cluster0.83silvv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0)
 #---------------------------------------------------------------
 #---------------------------------------------------------------
 
@@ -44,10 +44,10 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
 # ----------------------------------------------------------------
 
 # ----------------------------------------------------------------
-LOGGER_ID = int(getenv("LOGGER_ID", -1001919135283))
+LOGGER_ID = int(getenv("LOGGER_ID", -1002163618411))
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
-OWNER_ID = int(getenv("OWNER_ID", 6664582540))
+OWNER_ID = int(getenv("OWNER_ID", 1510573431))
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 
@@ -94,8 +94,8 @@ SONG_DOWNLOAD_DURATION_LIMIT = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "99999
 # --------------------------------------------------------------------------------
 
 # ---------------------------------------------------------------------------------
-SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "1c21247d714244ddbb09925dac565aed")
-SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "709e1a2969664491b58200860623ef19")
+SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "33d9f3d962e24c2780a8b46fbc16a527")
+SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "ea7e90aa0c0847e38c49a1a3b10a866a")
 # ----------------------------------------------------------------------------------
 
 
@@ -117,7 +117,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "5242880000"))
 # ------------------------------------
 # ------------------------------------
 # ------------------------------------
-STRING1 = getenv("STRING_SESSION", None)
+STRING1 = "BQG7o_AAkSF1xhv7V7rXxks9DIpa55PjKRYeXDjRsjyw39Zwp2G1CFl8CDkV0JGLIbC1dpiuLTmeIyLT4lKlvf_KMLPG2q5fbpT6L8wa8aB-AjoSgEkqp0lfd4WNW8_Z8TeNkuEjMwTofQu-79qjlPsi-IuK9b6XV1HX4_n58D-zg431NQBJiEyRzhxPpmHDzXwsnMopGXvqoEldhXjA-DyShYy3W5IHEthQW-TCKHHSCiQ580VZCe_QsplIMES_aS5iG0WzRibQPP-LITyAn5yA2ESLKWhj07D_m44eGkWiiMvZoScf52i48La4tHp2xf8wPlWIdqnkt14xWMQWbnQshXdavgAAAAGTeXbeAA"
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
