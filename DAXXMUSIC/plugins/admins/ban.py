@@ -39,14 +39,14 @@ async def ban_user(user_id, first_name, admin_id, admin_name, chat_id, reason, t
     try:
         await app.ban_chat_member(chat_id, user_id)
     except ChatAdminRequired:
-        msg_text = "Ban rights? Nah, I'm just here for the digital high-fives 🙌\nGive me ban rights! 😡🥺"
+        msg_text = "Ban rights? Nah, I'm just a time pass here 🙌\nGive me ban rights! 😡🥺"
         return msg_text, False
     except UserAdminInvalid:
-        msg_text = "I wont ban an admin bruh!!"
+        msg_text = "I won't ban an admin bruh!!, U mad or wot?"
         return msg_text, False
     except Exception as e:
         if user_id == 6711389550:
-            msg_text = "why should i ban myself? sorry but I'm not stupid like you"
+            msg_text = "why should i ban myself? sorry but I'm not a fool like you"
             return msg_text, False
         
         msg_text = f"opps!!\n{e}"
@@ -70,7 +70,7 @@ async def unban_user(user_id, first_name, admin_id, admin_name, chat_id):
     try:
         await app.unban_chat_member(chat_id, user_id)
     except ChatAdminRequired:
-        msg_text = "Ban rights? Nah, I'm just here for the digital high-fives 🙌\nGive me ban rights! 😡🥺"
+        msg_text = "Ban rights? Nah, I'm just a time pass here 🙌\nGive me ban rights! 😡🥺"
         return msg_text
     except Exception as e:
         msg_text = f"opps!!\n{e}"
@@ -92,14 +92,14 @@ async def mute_user(user_id, first_name, admin_id, admin_name, chat_id, reason, 
         else:
             await app.restrict_chat_member(chat_id, user_id, ChatPermissions())
     except ChatAdminRequired:
-        msg_text = "Mute rights? Nah, I'm just here for the digital high-fives 🙌\nGive me mute rights! 😡🥺"
+        msg_text = "Mute rights? Nah, I'm silent myself... 🙌\nGive me mute rights! 😡🥺"
         return msg_text, False
     except UserAdminInvalid:
         msg_text = "I wont mute an admin bruh!!"
         return msg_text, False
     except Exception as e:
         if user_id == 6664582540:
-            msg_text = "why should i mute myself? sorry but I'm not stupid like you"
+            msg_text = "why should i mute myself? sorry but I'm not a fool like you"
             return msg_text, False
         
         msg_text = f"opps!!\n{e}"
@@ -133,7 +133,7 @@ async def unmute_user(user_id, first_name, admin_id, admin_name, chat_id):
             )
         )
     except ChatAdminRequired:
-        msg_text = "Mute rights? Nah, I'm just here for the digital high-fives 🙌\nGive me unmute rights! 😡🥺"
+        msg_text = "Mute rights? Nah, I'm just a time pass here 🙌\nGive me unmute rights! 😡🥺"
         return msg_text
     except Exception as e:
         msg_text = f"opps!!\n{e}"
@@ -226,7 +226,7 @@ async def unban_command_handler(client, message):
         except:
             user_obj = await get_userid_from_username(message.command[1])
             if user_obj == None:
-                    return await message.reply_text("I can't find that user")
+                    return await message.reply_text("Seems I can't find that user")
             user_id = user_obj[0]
             first_name = user_obj[1]
 
