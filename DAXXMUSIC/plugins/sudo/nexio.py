@@ -76,6 +76,7 @@ async def restriction_app(app :app, message):
         for unbanned in data:
             print(f"present {unbanned}")
             if unbanned in unban:
+                if user_id in SUDOERS:
                 await app.unban_chat_member(chat_id, user_id)
                 await message.reply(f"Ok, aapke kehne pr unban kr rhi hun") 
                 
@@ -104,6 +105,7 @@ async def restriction_app(app :app, message):
         for unmuted in data:
             print(f"present {unmuted}")            
             if unmuted in unmute:
+                if user_id in SUDOERS:
                 permissions = ChatPermissions(can_send_messages=True)
                 await message.chat.restrict_member(user_id, permissions)
                 await message.reply(f"Huh, OK, sir!")   
@@ -112,6 +114,7 @@ async def restriction_app(app :app, message):
         for promoted in data:
             print(f"present {promoted}")            
             if promoted in promote:
+                if user_id in SUDOERS:
                 await app.promote_chat_member(chat_id, user_id, privileges=ChatPrivileges(
                     can_change_info=False,
                     can_invite_users=True,
@@ -128,6 +131,7 @@ async def restriction_app(app :app, message):
         for demoted in data:
             print(f"present {demoted}")            
             if demoted in demote:
+                if user_id in SUDOERS:
                 await app.promote_chat_member(chat_id, user_id, privileges=ChatPrivileges(
                     can_change_info=False,
                     can_invite_users=False,
@@ -146,6 +150,7 @@ async def restriction_app(app :app, message):
     for fullpromoted in data:
         print(f"present {fullpromoted}")            
         if fullpromoted in fullpromote:
+                if user_id in SUDOERS:
             await app.promote_chat_member(chat_id, user_id, privileges=ChatPrivileges(
                 can_change_info=True,
                 can_invite_users=True,
