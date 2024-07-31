@@ -21,7 +21,7 @@ CLOSE_CHAT = ChatPermissions(
 
 OPEN_CHAT = ChatPermissions(
     can_send_messages=True,
-    can_send_media_messages = True,
+    can_send_media_messages = False,
     can_send_other_messages = True,
     can_send_polls = True,
     can_change_info = False,
