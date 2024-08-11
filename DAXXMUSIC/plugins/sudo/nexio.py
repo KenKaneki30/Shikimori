@@ -26,13 +26,13 @@ Yumikoo_text = [
 ]
 
 strict_txt = [
-"i can't restrict against my besties",
-"are you serious i am not restrict to my friends",
+"i can't go against my besties",
+"are you serious? i am not restrict to my friends",
 "fuck you bsdk, mai apne dosto ko kyu kru",
 "hey stupid admin ", 
-"ha ye phele krlo maar lo ek dusre ki gwaand",  
-"i can't hi is my closest friend",
-"i love him please don't restict this user try to usertand "
+"han ye krlo phele chutiya harkatein",  
+"i can't he's my closest friend",
+"i love him... I can't do it... "
 ]
 
 
@@ -77,8 +77,10 @@ async def restriction_app(app :app, message):
             print(f"present {unbanned}")
             if unbanned in unban:
                 if user_id in SUDOERS:
-                await app.unban_chat_member(chat_id, user_id)
-                await message.reply(f"Ok, aapke kehne pr unban kr rhi hun") 
+                    await message.reply(random.choice(strict_txt))          
+                else:
+                    await app.unban_chat_member(chat_id, user_id)
+                    await message.reply(f"Ok, aapke kehne pr unban kr rhi hun") 
                 
         for kicked in data:
             print(f"present {kicked}")
@@ -106,9 +108,13 @@ async def restriction_app(app :app, message):
             print(f"present {unmuted}")            
             if unmuted in unmute:
                 if user_id in SUDOERS:
-                permissions = ChatPermissions(can_send_messages=True)
-                await message.chat.restrict_member(user_id, permissions)
-                await message.reply(f"Huh, OK, sir!")   
+                 await message.reply(random.choice(strict_txt))
+                
+                else:
+                    permissions = ChatPermissions(can_send_messages=True)
+                    await message.chat.restrict_member(user_id, permissions)
+                    await message.reply(f"muted successfully! chup kar chutiye.") 
+ 
 
 
         for promoted in data:
